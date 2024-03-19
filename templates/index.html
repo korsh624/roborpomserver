@@ -1,11 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link href="{{ url_for('static',filename='style.css') }}" rel="stylesheet">
-</head>
-<body>
-<h1>test</h1>
-</body>
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <title>{% block title %}Docs{% endblock %}</title>
+    </head>
+
+    <body>
+
+   <!-- header element consisting of a logo and a heading -->
+        <header>
+            <div class="logo-wrapper">
+                <img
+                    src="https://roboprom.kvantorium33.ru/assets/img/hero-img.png"
+                    alt="Робопром Logo"
+                />
+            </div>
+        </header>
+    <main>
+
+
+        {% block body %}
+
+        {% endblock %}
+    </main>
+
+    </body>
 </html>
